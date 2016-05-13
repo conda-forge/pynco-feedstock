@@ -5,7 +5,7 @@ Home: https://github.com/nco/pynco
 
 Package license: GPLv2
 
-Feedstock license: BSD
+Feedstock license: BSD 3-Clause
 
 Summary: Python bindings to NCO
 
@@ -69,9 +69,15 @@ Terminology
 
 Current build status
 ====================
+
 Linux: [![Circle CI](https://circleci.com/gh/conda-forge/pynco-feedstock.svg?style=svg)](https://circleci.com/gh/conda-forge/pynco-feedstock)
 OSX: [![TravisCI](https://travis-ci.org/conda-forge/pynco-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/pynco-feedstock) 
 Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/pynco-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/pynco-feedstock/branch/master)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pynco/badges/version.svg)](https://anaconda.org/conda-forge/pynco)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pynco/badges/downloads.svg)](https://anaconda.org/conda-forge/pynco)
 
 
 Updating pynco-feedstock
