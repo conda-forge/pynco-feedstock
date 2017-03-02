@@ -1,4 +1,4 @@
-{% set version = "0.0.2" %}
+{% set version = "0.0.3" %}
 
 package:
   name: pynco
@@ -7,7 +7,7 @@ package:
 source:
   fn: pynco-{{ version }}.tar.gz
   url: https://github.com/nco/pynco/archive/{{ version }}.tar.gz
-  sha256: c3f3155d13bc4dd05df791f2e2e212e33890e216e3c10e4e43e2d3276a427d22
+  sha256: 17b85ee9675c1144e328516adbecd1383f37a69a87bb65eb4f616eee95253ccf
 
 build:
   number: 0
