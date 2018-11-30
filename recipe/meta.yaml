@@ -1,6 +1,6 @@
 {% set name = "pynco" %}
-{% set version = "0.0.4" %}
-{% set sha256 = "42ae74cac2fb66c9902b794ece630d52045f2b00786fcab4155609498e0a3c57" %}
+{% set version = "1.0.0" %}
+{% set sha256 = "7949fabe691ae7da3d9b9331b0983e815713636c" %}
 
 package:
   name: {{ name }}
@@ -15,6 +15,7 @@ build:
   number: 0
   noarch: python
   script: python -m pip install --no-deps --ignore-installed .
+  skip: true  # [py<35]
 
 requirements:
   build:
@@ -22,12 +23,6 @@ requirements:
     - pip
   run:
     - python
-    - python-dateutil
-    - h5py
-    - netcdf4
-    - numpy
-    - scipy
-    - nco
 
 test:
   imports:
@@ -35,7 +30,7 @@ test:
 
 about:
   home: https://github.com/nco/pynco
-  license: GPL-2.0
+  license: MIT
   license_file: LICENSE.txt
   summary: 'Python bindings to NCO.'
 
