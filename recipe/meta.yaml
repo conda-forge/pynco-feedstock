@@ -1,6 +1,6 @@
 {% set name = "pynco" %}
-{% set version = "0.0.4" %}
-{% set sha256 = "42ae74cac2fb66c9902b794ece630d52045f2b00786fcab4155609498e0a3c57" %}
+{% set version = "1.0.0" %}
+{% set sha256 = "b82c02d9bb2bd8ee9747d7f1a24e5fe1476c75f956f16cb88805f1cc8eff5dd2" %}
 
 package:
   name: {{ name }}
