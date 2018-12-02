@@ -1,32 +1,24 @@
-{% set name = "pynco" %}
 {% set version = "1.0.0" %}
-{% set sha256 = "b82c02d9bb2bd8ee9747d7f1a24e5fe1476c75f956f16cb88805f1cc8eff5dd2" %}
 
 package:
-  name: {{ name }}
+  name: pynco
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://github.com/nco/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://github.com/nco/pynco/archive/{{ version }}.tar.gz
+  sha256: b82c02d9bb2bd8ee9747d7f1a24e5fe1476c75f956f16cb88805f1cc8eff5dd2
 
 build:
   number: 0
-  noarch: python
-  script: python -m pip install --no-deps --ignore-installed .
+  skip: True  # [win]
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
-  build:
+  host:
     - python
     - pip
   run:
     - python
-    - python-dateutil
-    - h5py
-    - netcdf4
-    - numpy
-    - scipy
     - nco
 
 test:
