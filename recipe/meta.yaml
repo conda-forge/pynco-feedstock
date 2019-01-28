@@ -10,15 +10,15 @@ source:
 
 build:
   number: 1
-  skip: True  # [win]
+  noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
   run:
-    - python
+    - python >=3.6
     - nco
     - numpy
 
