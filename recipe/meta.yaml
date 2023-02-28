@@ -1,24 +1,27 @@
+{% set name = "pynco" %}
+{% set package_name = "nco" %}
 {% set version = "1.0.0" %}
+{% set build_num = 0 %}
 
 package:
-  name: pynco
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/nco/pynco/archive/{{ version }}.tar.gz
-  sha256: b82c02d9bb2bd8ee9747d7f1a24e5fe1476c75f956f16cb88805f1cc8eff5dd2
+  url: https://pypi.io/packages/source/{{ package_name[0] }}/{{ package_name }}/{{ package_name }}-{{ version }}.tar.gz
+  sha256: 58c06800f35a54dcde0e74a089788c3a90622dffbd125b478005c18612137fb0
 
 build:
-  number: 1
+  number: {{ build_num }}
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.7
     - pip
   run:
-    - python >=3.6
+    - python >=3.7
     - nco
     - numpy
 
@@ -37,3 +40,5 @@ extra:
     - jhamman
     - ocefpaf
     - kwilcox
+    - czender
+    - mx-moth
