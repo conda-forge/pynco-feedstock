@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pynco-feedstock
 
 Home: https://github.com/nco/pynco
 
-Package license: GPL-2.0
+Package license: MIT
 
 Summary: Python bindings to NCO.
 
@@ -143,7 +143,9 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@czender](https://github.com/czender/)
 * [@jhamman](https://github.com/jhamman/)
 * [@kwilcox](https://github.com/kwilcox/)
+* [@mx-moth](https://github.com/mx-moth/)
 * [@ocefpaf](https://github.com/ocefpaf/)
 
