@@ -24,6 +24,7 @@ requirements:
     - python >=3.7
     - nco
     - numpy
+    - packaging
 
 test:
   imports:
