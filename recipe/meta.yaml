@@ -1,26 +1,30 @@
-{% set version = "1.0.0" %}
+{% set name = "pynco" %}
+{% set package_name = "nco" %}
+{% set version = "1.1.0" %}
+{% set build_num = 0 %}
 
 package:
-  name: pynco
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/nco/pynco/archive/{{ version }}.tar.gz
-  sha256: b82c02d9bb2bd8ee9747d7f1a24e5fe1476c75f956f16cb88805f1cc8eff5dd2
+  url: https://pypi.io/packages/source/{{ package_name[0] }}/{{ package_name }}/{{ package_name }}-{{ version }}.tar.gz
+  sha256: 0d023c4e30db341f6eabdc8d7982c39e4fb99c73edc5d5b60555097803f18e05
 
 build:
-  number: 1
+  number: {{ build_num }}
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.7
     - pip
   run:
-    - python >=3.6
+    - python >=3.7
     - nco
     - numpy
+    - packaging
 
 test:
   imports:
@@ -28,7 +32,7 @@ test:
 
 about:
   home: https://github.com/nco/pynco
-  license: GPL-2.0
+  license: MIT
   license_file: LICENSE.txt
   summary: 'Python bindings to NCO.'
 
@@ -39,3 +43,5 @@ extra:
     - jhamman
     - ocefpaf
     - kwilcox
+    - czender
+    - mx-moth
