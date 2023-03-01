@@ -38,6 +38,8 @@ about:
 
 extra:
   recipe-maintainers:
+    - czender
+    - mx-moth
     - jhamman
     - ocefpaf
     - kwilcox
