@@ -1,6 +1,6 @@
 {% set name = "pynco" %}
 {% set package_name = "nco" %}
-{% set version = "1.1.0" %}
+{% set version = "1.1.2" %}
 {% set build_num = 1 %}
 
 package:
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ package_name[0] }}/{{ package_name }}/{{ package_name }}-{{ version }}.tar.gz
-  sha256: 0d023c4e30db341f6eabdc8d7982c39e4fb99c73edc5d5b60555097803f18e05
+  sha256: 2a9468662a4f4fc4505162a205ae54b4da375bdce567fd3649f7f614272b79d5
 
 build:
   number: {{ build_num }}
